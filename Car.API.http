@@ -1,0 +1,41 @@
+@Car.API_HostAddress = http://localhost:5274
+
+GET {{Car.API_HostAddress}}/cars
+Accept: application/json
+
+###
+
+GET {{Car.API_HostAddress}}/cars/1
+Accept: application/json
+
+###
+
+POST {{Car.API_HostAddress}}/cars
+Content-Type: application/json
+
+{
+  "make": "Mercedes-Benz",
+  "model": "C-Class",
+  "year": 2024,
+  "vin": "WDDWF4JB1FR123456",
+  "price": 58900.00,
+  "status": "Available"
+}
+
+###
+
+PUT {{Car.API_HostAddress}}/cars/1
+Content-Type: application/json
+
+{
+  "make": "Toyota",
+  "model": "Corolla",
+  "year": 2022,
+  "vin": "1HGBH41JXMN109186",
+  "price": 21000.00,
+  "status": "Sold"
+}
+
+###
+
+DELETE {{Car.API_HostAddress}}/cars/1
